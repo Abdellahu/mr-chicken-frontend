@@ -8,6 +8,7 @@ import {
   PhoneFill,
   Tiktok,
 } from "react-bootstrap-icons";
+import { Link } from "react-router";
 import { useTheme } from "./../Header/Brightness";
 function Footer() {
   const { theme } = useTheme();
@@ -43,7 +44,7 @@ function Footer() {
             </div>
             <div className="phone">
               <PhoneFill className="icon-foot" />{" "}
-              <p className="grey forRed con-foot">+251 941 25 0000</p>
+              <Link to='tel: +251941250000' className="grey forRed con-foot">+251 941 25 0000</Link>
             </div>
             <div className="email">
               <ChatFill className="icon-foot" />{" "}

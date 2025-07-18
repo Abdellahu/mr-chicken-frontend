@@ -50,7 +50,7 @@ function Menu() {
             setError(null);
             setLoading(true);
             try {
-              const response = await axios.get('http://localhost:3011/select_dish');
+              const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/select_dish`);
               console.log("API Response data", response.data);
               setDroupedDishes(response.data);
                 setLoading(false);

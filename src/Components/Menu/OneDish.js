@@ -21,7 +21,7 @@ function OneDish({ passer }) {
               <div className="visual">
                 <img
                   className="visualImage"
-                  src={`http://localhost:3011${dish.dish_image_path}`}
+                  src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`}
                   alt="DishImage"
                 />
               </div>

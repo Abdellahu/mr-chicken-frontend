@@ -13,7 +13,7 @@ function FeedDataProvider() {
       setError(null);
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3011/select_feed");
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/select_feed`);
         console.log("API Response feed data", response.data);
         setFeedbacks(response.data);
         setLoading(false);

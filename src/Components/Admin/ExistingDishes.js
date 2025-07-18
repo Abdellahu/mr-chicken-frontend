@@ -13,7 +13,7 @@ function ExistingDishes() {
   const handleEdit =  async(e) => {
     e.preventDefault();
 
-       await axios.put(`http://localhost:3011/update_price`, {
+       await axios.put(`${process.env.REACT_APP_BACKEND_URL}/update_price`, {
         "price_edit": price_edit,
         "id_edit": Number(id_edit),
       }); 
@@ -26,7 +26,7 @@ function ExistingDishes() {
       setError(null);
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3011/select_dish");
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/select_dish`);
         console.log("API Response data", response.data);
         setDroupedDishes(response.data);
         setLoading(false);
@@ -45,7 +45,7 @@ function ExistingDishes() {
 
     if (window.confirm('Are you sure you want to delete this dish?')) {
         
-          await axios.delete('http://localhost:3011/remove_dish', {  
+          await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/remove_dish`, {  
             data: { id_delete: parseInt(id_delete) } 
         });
       }  
@@ -93,7 +93,7 @@ function ExistingDishes() {
                       <div className="shownadList row">
                         <div className="col-1 dishImage">
                           <img
-                            src={`http://localhost:3011${dish.dish_image_path}`}
+                            src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`}
                             alt="dish image"
                             className="imageDish"
                           />

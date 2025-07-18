@@ -41,7 +41,7 @@ function Order() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:3011/select_dish_normal"
+          `${process.env.REACT_APP_BACKEND_URL}/select_dish_normal`
         );
         setDishes(response.data);
         setLoading(false);
@@ -104,7 +104,7 @@ function Order() {
       formData.append("dish_total_price", dish_total_price);
       formData.append("dish_message", dish_message);
 
-      await axios.post("http://localhost:3011/add-new-order", formData);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}`, formData);
       new Promise((resolve) => setTimeout(resolve, 500));
       setMessage("Data submitted successfully!");
       setShowNotification(true);
@@ -177,7 +177,7 @@ function Order() {
                   <div className="shownadList inOder row">
                     <div className="col-1 dishImage">
                       <img
-                        src={`http://localhost:3011${dish.dish_image_path}`}
+                        src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`}
                         className="imageDish"
                       />
                     </div>

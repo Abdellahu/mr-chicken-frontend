@@ -12,7 +12,7 @@ function Orders() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3011/select_order");
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/select_order`);
       console.log("API Response data", response.data);
       setOrders(response.data);
     };
@@ -22,7 +22,7 @@ function Orders() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "http://localhost:3011/select_dish_normal"
+        `${process.env.REACT_APP_BACKEND_URL}/select_dish_normal`
       );
       console.log("API Response data", response.data);
       setDishes(response.data);
@@ -85,7 +85,7 @@ function Orders() {
                       <div className="adList-R liforord">
                         <div className="shownadList row">
                           <img
-                            src={`http://localhost:3011${newOrder.dish_image_path}`}
+                            src={`${process.env.REACT_APP_BACKEND_URL}${newOrder.dish_image_path}`}
                             className="dishImage imageDish col-1"
                           />
                           <div className="dishNamead col-4">

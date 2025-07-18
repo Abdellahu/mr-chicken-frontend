@@ -29,7 +29,7 @@ function Page3() {
               <div className="eachDish ">
                 <div className="EachDishWraper">
                   <div className="visual">
-                    <img className="visualImage" src={`http://localhost:3011${dish.dish_image_path}`} alt='Dish Image' />
+                    <img className="visualImage" src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`} alt='Dish Image' />
                   </div>
                   <div className="writen">
                     <div className="type">
@@ -62,7 +62,7 @@ function Page3() {
               <div className="eachDish ">
                 <div className="EachDishWraper">
                   <div className="visual">
-                    <img className="visualImage" src={`http://localhost:3011${dish.dish_image_path}`} alt='Dish Image' />
+                    <img className="visualImage" src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`} alt='Dish Image' />
                   </div>
                   <div className="writen">
                     <div className="type">
@@ -95,7 +95,7 @@ function Page3() {
               <div className="eachDish ">
                 <div className="EachDishWraper">
                   <div className="visual">
-                    <img className="visualImage visualImageSpacial" src={`http://localhost:3011${dish.dish_image_path}`} alt='Dish Image' />
+                    <img className="visualImage visualImageSpacial" src={`${process.env.REACT_APP_BACKEND_URL}${dish.dish_image_path}`} alt='Dish Image' />
                   </div>
                   <div className="writen">
                     <div className="type">

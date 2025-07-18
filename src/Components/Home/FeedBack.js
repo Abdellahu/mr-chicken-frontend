@@ -37,7 +37,7 @@ function FeedBack({ onMessage }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3011/add-new-feed/", {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-feed/`, {
         feed_user_name: feed_user_name,
         feed_user_email: feed_user_email,
         feed_text: feed_text,

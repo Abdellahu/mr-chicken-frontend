@@ -31,7 +31,7 @@ function Dishes() {
         formData.append("dish_image", dish_image);
       }
 
-      await axios.post("http://localhost:3011/add-new-dish", formData);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-dish`, formData);
 
       setMessage("Data submitted successfully!");
       setError("");
