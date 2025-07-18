@@ -1,0 +1,93 @@
+.orders {
+  padding: 15px;
+}
+.orders-wraper {
+  max-width: 600px;
+  padding-left: 30px;
+}
+.toDimOrder {
+  background-color: #414141;
+  color: #fff;
+  .UserMsg {
+    color: rgb(227, 230, 25);
+  }
+  .shownadList {
+    background-color: #4b9777;
+  }
+  .shownadLists {
+    background-color: #5e5c5c;
+  }
+  .check:hover {
+    background-color: #358840;
+  }
+}
+.recentOrder {
+  font-size: 25px;
+  font-weight: 700;
+}
+.UserMsg {
+  color: rgb(230, 25, 93);
+  margin-left: 15px;
+  font-weight: 500;
+}
+.topper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px;
+  border-top: 2px solid#c5c1c1;
+  p {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+.numOfOrd {
+  font-size: 19px;
+  font-weight: 500;
+}
+.dishNameads {
+  text-align: center;
+}
+.check {
+  margin-right: 10px;
+}
+.check:hover {
+  background-color: #deffa1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .orders {
+    padding-left: 220px;
+  }
+}
+@media (max-width: 477px) {
+  .dishTypead {
+    width: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .shownadList {
+    font-size: 13px;
+  }
+  .dishNamead {
+    font-size: 14px;
+  }
+}
+@media (max-width: 415px) {
+  .dishImage {
+    width: 50px;
+  }
+  .dishNamead {
+    font-size: 13px;
+    width: 70px;
+  }
+}
+@media (max-width: 395px) {
+  .dishImage {
+    width: 40px;
+  }
+  .dishNamead {
+    font-size: 13px;
+    width: 70px;
+  }
+}

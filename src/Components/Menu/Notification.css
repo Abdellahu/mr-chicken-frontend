@@ -1,0 +1,28 @@
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  transition: all 0.3s ease-in-out; /* Smooth transition for opacity */
+  opacity: 1;
+  border-bottom: 5px solid green; /* Initial bottom border */
+}
+
+.exit-animation {
+    animation: bottomBorderFade 3s forwards;
+    animation-delay: 0.5s; /* Ensure animation is delayed by 500ms */
+}
+@keyframes bottomBorderFade {
+  0% {
+    border-bottom-width: 5px;
+    opacity: 1;
+  }
+  100% {
+    border-bottom-width: 0;
+    opacity: 0;
+  }
+}

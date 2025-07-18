@@ -1,0 +1,166 @@
+.dishes{
+    padding-left: 30px;
+
+}
+.adDishes-wrapper{
+    padding: 15px;
+    max-width: 600px;
+}
+.toDimDish{
+   background-color: #414141;
+    color: #fff;
+    .addNewWraper input, .addNewWraper textarea, .addNewWraper select{
+        background-color: #414141;
+        color: #ffffff;
+    }
+    .shownadList{
+        background-color: #4b9777;
+    }
+    .shownadLists{
+       background-color: #5e5c5c;
+    }
+    .editPricead-text{
+        background-color: #555555;
+        color: #fff;
+    }
+}
+.todayAvailable{
+    font-size: 30px;
+    font-weight: 700;
+}
+.dishAdBtns a{
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.dishAdBtns{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.adListBtn{
+    background-color: #fabe18;
+}
+.adNewListBtn{
+    background-color: #48b432;
+}
+.adListBtn:hover{
+    background-color: #eed286;
+}
+.adNewListBtn:hover{
+    background-color: #e0b15a;
+}
+
+.dishImage{
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0px;
+    max-height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+.dishEditPricead{
+    background-color: var(--primary-color);
+    width: fit-content;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+}
+.dishEditPricead:hover{
+    cursor: pointer;
+    background-color: #ee935f;
+
+}
+.shownadList{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #fff3cb;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    height: 70px;
+    align-items: center;
+    font-weight: 500;
+}
+.shownadLists{
+    background-color: #d6d6d6;
+     height: 50px;
+     padding-left: 10px;
+     padding-right: 10px;
+     text-align: end;
+}
+.dishNamead{
+    font-size: 18px;
+}
+.editPricead{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: end;
+    margin-right: 20px;
+}
+.priceEditLabel{
+    font-weight: 500;
+}
+.editPricead-text{
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 10px;
+    width: fit-content;
+    
+}
+.editPricead-Btn{
+    width: fit-content;
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+    height: fit-content;
+    padding: 3px 10px;
+}
+.addNewWraper{
+    margin-top: 20px;
+    
+}
+.addNewWraper label{
+    margin-top: 10px;
+    font-weight: 500;
+
+}
+.addNewWraper input, .addNewWraper textarea, .addNewWraper select{
+    width: 100%;
+    border: 1px solid #d1d0d0;
+    border-radius: 5px;
+    padding: 7px 15px;
+
+}
+.addNewWraper textarea{
+    height: 100px;
+}
+.newBtn{
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+}
+.addNewWraper{
+    border: 2px solid #b4b1b1;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.typeDish{
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 20px;
+}
+@media (min-width: 768px) {
+    .dishes{
+        padding-left: 220px;
+
+    }
+}

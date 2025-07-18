@@ -1,0 +1,89 @@
+.OrderHome{
+    padding: 80px 30px;
+
+}
+.OrderHWrap{
+    max-width: 700px;
+    max-height: 100%;
+}
+.todimOh{
+    background-color: #3a3a3a;
+    color: #fff;
+    .shownadList{
+        background-color: #4b9777;
+    }
+    .yours{
+        color: #faf3f3;
+    }
+    .shownadLists{
+       background-color: #5e5c5c;
+    }
+    .visiblePay{
+       color: #c0c0c0;
+    } 
+    .orderDiv input{
+        background-color: #575757;
+    }
+}
+.imageDish{
+    max-width: 100%;
+    transform: scale(1.5);
+}
+.noOrder{
+    margin: 10%;
+    font-size: 60px;
+    color: #818181;
+    font-style: italic;
+}
+.yours{
+    font-weight: 700;
+    font-size: 30px;
+    color: #1d1c1c;
+}
+.inOder{
+    text-align: center;
+}
+.rowOrder{
+    text-align: center;
+}
+.orderAndPay{
+    margin-top: 20px;
+}
+.pay{
+    display: flex;
+}
+.pay div {
+    font-weight: 500;
+    margin-right: 30px;
+}
+.payBtn{
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-left: 20px;
+    width: 50%;
+    font-weight: 600;
+}
+.TotalPrice, .payment{
+    font-weight: 600;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.visiblePay{
+    font-weight: 500;
+    color: #5f5f5f;
+}
+.orderDiv{
+    border: 1px solid #b8b8b8;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 350px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+.orderDiv input {
+    width: 100%;
+    border: 1px solid #b8b8b8;
+    border-radius: 5px;
+}

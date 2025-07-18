@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+:root{
+    --primary-color: #ff5429;
+    --secondary-color: #777675;
+    --bg-color: #f8d8c5;
+}
+.dimBack{
+  filter: brightness(0.2) !important;
+
+}
