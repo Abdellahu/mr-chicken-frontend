@@ -22,6 +22,12 @@ function Page3() {
      return[...prevOrder, userId] 
      })
     }
+    const dishCategoryKey2 = Object.keys(passer2)[0]; 
+    const dishArray2 = passer2[dishCategoryKey2];
+   
+    const dishCategoryKey3 = Object.keys(passer3)[0]; 
+    const dishArray3 = passer3[dishCategoryKey3];
+
   return (
     <div className="dishesMenu container row">
           {mappedValues.map((dish) => ( 
@@ -57,7 +63,7 @@ function Page3() {
               </div>
             </div>
            ))}
-          {passer2[1].map((dish) => (
+          {dishArray2.map((dish) => (
             <div key={dish.dish_id} className="for-space col-md-6 col-xl-4 col-xxl-3" >
               <div className="eachDish ">
                 <div className="EachDishWraper">
@@ -90,7 +96,7 @@ function Page3() {
               </div>
             </div>
           ))}
-          {passer3[1].map((dish) => (
+          {dishArray3.map((dish) => (
             <div key={dish.dish_id} className="for-space col-md-6 col-xl-4 col-xxl-3" >
               <div className="eachDish ">
                 <div className="EachDishWraper">

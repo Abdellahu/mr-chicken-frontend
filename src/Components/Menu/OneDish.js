@@ -1,5 +1,5 @@
 import React from "react";
-import { HandThumbsUpFill, CaretLeft, CaretRight } from "react-bootstrap-icons";
+import { HandThumbsUpFill } from "react-bootstrap-icons";
 import { useMyContext } from "./DishDataProvider";
 
 function OneDish({ passer }) {
@@ -9,9 +9,11 @@ function OneDish({ passer }) {
       return [...prevOrder, userId];
     });
   };
+  const dishCategoryKey = Object.keys(passer)[0]; 
+    const dishArray = passer[dishCategoryKey];
   return (
     <div className="dishesMenu container row">
-      {passer[1].map((dish) => (
+      {dishArray.map((dish) => (
         <div
           key={dish.dish_id}
           className="for-space col-md-6 col-xl-4 col-xxl-3"

@@ -22,9 +22,15 @@ function Page2() {
      return[...prevOrder, userId] 
      })
     }
+    const dishCategoryKey1 = Object.keys(passer1)[0]; 
+    const dishArray1 = passer1[dishCategoryKey1];
+
+    const dishCategoryKey2 = Object.keys(passer2)[0]; 
+    const dishArray2 = passer2[dishCategoryKey2];
+ 
   return (
     <div className="dishesMenu container row">
-          {passer1[1].map((dish) => (
+          {dishArray1.map((dish) => (
             <div key={dish.dish_id} className="for-space col-md-6 col-xl-4 col-xxl-3" >
               <div className="eachDish ">
                 <div className="EachDishWraper">
@@ -57,7 +63,7 @@ function Page2() {
               </div>
             </div>
           ))}
-          {passer2[1].map((dish) => (
+          {dishArray2.map((dish) => (
             <div key={dish.dish_id} className="for-space col-md-6 col-xl-4 col-xxl-3" >
               <div className="eachDish ">
                 <div className="EachDishWraper">
