@@ -104,7 +104,7 @@ function Order() {
       formData.append("dish_total_price", dish_total_price);
       formData.append("dish_message", dish_message);
 
-      await axios.post(`${process.env.REACT_APP_BACKEND_URL}`, formData);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-order`, formData);
       new Promise((resolve) => setTimeout(resolve, 500));
       setMessage("Data submitted successfully!");
       setShowNotification(true);
