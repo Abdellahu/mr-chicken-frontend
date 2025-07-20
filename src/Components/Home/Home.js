@@ -63,6 +63,7 @@ function Home() {
       className={theme === "dark" ? "home-page toDimHome" : "home-page"}
     >
       <div className="premium">
+        <div className="adminAdmin"><Link to='/admin/dishes'>Admin</Link></div>
         <div className="pre-box-wraper">
           <div className="pre-text for-about firstOffAll  text-favo">
             <p>PREMIUM ETHIOPIAN CUISINE</p>

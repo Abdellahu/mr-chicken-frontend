@@ -497,6 +497,17 @@
 .real-f {
   margin-top: 20px;
 }
+.adminAdmin{
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: #e0e0e0;
+}
 
 @media (min-width: 768px) {
   .abstract {
