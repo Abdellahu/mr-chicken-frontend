@@ -46,7 +46,7 @@ function ExistingDishes() {
     if (window.confirm('Are you sure you want to delete this dish?')) {
         
           await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/remove_dish`, {  
-            data: { id_delete: parseInt(id_delete) } 
+            data: { id_delete: Number(id_delete) } 
         });
       }  
   };

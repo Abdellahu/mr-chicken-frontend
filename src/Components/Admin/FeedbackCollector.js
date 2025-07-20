@@ -45,7 +45,7 @@ function FeedbackCollector() {
     if (window.confirm('Are you sure you want to delete this feedback?')) {
         
           await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/remove_feed`, {  
-            data: { id_delete: parseInt(id_delete) } 
+            data: { id_delete: Number(id_delete)} 
         });
       }  
   };
