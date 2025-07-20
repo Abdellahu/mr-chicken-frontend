@@ -16,6 +16,7 @@ function StarRating({ rating }) {
 function FeedbackCollector() {
   const { theme } = useTheme();
   const [feedbacks, setFeedbacks] = useState([]);
+  const [id_delete, setDeleteId] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
@@ -37,6 +38,21 @@ function FeedbackCollector() {
 
     fetchData();
   }, []);
+
+  const handleDeleteFeed = async (e) => {
+    e.preventDefault();
+
+    if (window.confirm('Are you sure you want to delete this feedback?')) {
+        
+          await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/remove_feed`, {  
+            data: { id_delete: parseInt(id_delete) } 
+        });
+      }  
+  };
+
+  const setDishDeleteId = (dishId) => {
+    setDeleteId(dishId)
+  }
 
   if (loading) {
     return <div>Loading feedbacks...</div>;
@@ -72,8 +88,8 @@ function FeedbackCollector() {
               <p className="feederCescription">"{feed.feed_text}"</p>
               <p className="feederEmail">Email: {feed.feed_user_email}</p>
               <p className="feederYear">{feed.feed_date}</p>
-              <div className="feedLay">
-                <button className="publish reply">
+              <div onClick={() => setDishDeleteId(feed.feed_id)} className="feedLay">
+                <button onClick={handleDeleteFeed} className="publish reply">
                   Delete <Trash />
                 </button>
               </div>
