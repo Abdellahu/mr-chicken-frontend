@@ -15,7 +15,6 @@ function Order() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visibleDishIds, setVisibleDishIds] = useState({});
-  const [showNotification, setShowNotification] = useState(false);
   let [dish_id, setDishId] = useState("");
   const [dish_time, setDishTime] = useState("");
   const [dish_user_name, setUserName] = useState("");
@@ -105,9 +104,7 @@ function Order() {
       formData.append("dish_message", dish_message);
 
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-order`, formData);
-      new Promise((resolve) => setTimeout(resolve, 500));
       setMessage("Data submitted successfully!");
-      setShowNotification(true);
       setUserName("");
       setUserEmail("");
       setMessage("");
@@ -289,12 +286,6 @@ function Order() {
             <p>Mr. Chicken: 1000121212121212 Dashen Bank</p>
             <p>Mr. Chicken: 1000121212121212 Awash Bank</p>
           </div>
-        )}
-        {showNotification && (
-          <Notification
-            message="Order sent successfully!"
-            onClose={() => setShowNotification(false)}
-          />
         )}
       </div>
     </div>
