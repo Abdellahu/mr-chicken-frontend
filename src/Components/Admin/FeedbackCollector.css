@@ -76,7 +76,6 @@
 .feederYear {
   font-size: 18px;
   font-weight: 600;
-  float: right;
 }
 .feedLay {
   margin-top: 30px;
@@ -106,6 +105,10 @@
 .sendLast {
   width: 94%;
   margin: 5px 15px;
+}
+.lastsae{
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {

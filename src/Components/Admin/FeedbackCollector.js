@@ -73,8 +73,10 @@ function FeedbackCollector() {
                  <StarRating rating={feed.feed_rating}/>
               </div>
               <p className="feederCescription">"{feed.feed_text}"</p>
-              <p className="feederEmail">Email: {feed.feed_user_email}</p>
-              <p className="feederYear">{feed.feed_date}</p>
+              <div className="lastsae">
+                <p className="feederEmail">Email: {feed.feed_user_email}</p>
+                <p className="feederYear">{feed.feed_date}</p>
+              </div>
             </div>
             ))}
         </div>
