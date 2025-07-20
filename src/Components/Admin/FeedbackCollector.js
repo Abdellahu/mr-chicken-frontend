@@ -39,8 +39,8 @@ function FeedbackCollector() {
     fetchData();
   }, []);
 
-  const handleDeleteFeed = async (e) => {
-    e.preventDefault();
+  const handleDeleteFeed = async (dishId) => {
+      setDeleteId(dishId)
 
     if (window.confirm('Are you sure you want to delete this feedback?')) {
         
@@ -50,9 +50,7 @@ function FeedbackCollector() {
       }  
   };
 
-  const setDishDeleteId = (dishId) => {
-    setDeleteId(dishId)
-  }
+ 
 
   if (loading) {
     return <div>Loading feedbacks...</div>;
@@ -88,8 +86,8 @@ function FeedbackCollector() {
               <p className="feederCescription">"{feed.feed_text}"</p>
               <p className="feederEmail">Email: {feed.feed_user_email}</p>
               <p className="feederYear">{feed.feed_date}</p>
-              <div onClick={() => setDishDeleteId(feed.feed_id)} className="feedLay">
-                <button onClick={handleDeleteFeed} className="publish reply">
+              <div onClick={() => handleDeleteFeed(feed.feed_id)} className="feedLay">
+                <button className="publish reply">
                   Delete <Trash />
                 </button>
               </div>
