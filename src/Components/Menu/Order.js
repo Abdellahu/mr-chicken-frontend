@@ -95,15 +95,15 @@ function Order() {
 
     
     try {
-      const formData = new FormData();
-      formData.append("dish_id", dish_id);
-      formData.append("dish_time", dish_time);
-      formData.append("dish_user_name", dish_user_name);
-      formData.append("dish_user_email", dish_user_email);
-      formData.append("dish_total_price", dish_total_price);
-      formData.append("dish_message", dish_message);
 
-      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-order`, formData);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/add-new-order`, {
+        dish_id: dish_id,
+        dish_time: dish_time,
+        dish_user_name: dish_user_name,
+        dish_user_email: dish_user_email,
+        dish_total_price: dish_total_price,
+        dish_message: dish_message,
+      })
       setMessage("Data submitted successfully!");
       setUserName("");
       setUserEmail("");
